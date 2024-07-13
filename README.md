@@ -46,13 +46,349 @@ COPY main.js main.js
 RUN npm install
 
 ENTRYPOINT [ "node", "main.js" ]
-------------------------------------------------------------------------------------------------
+
+
 Container or virtual machine manager, such as: 
 Docker, QEMU, Hyperkit, Hyper-V, KVM, Parallels, Podman, VirtualBox, or VMware Fusion/Workstation
 ------------------------------------------------------------------------------------------------
 
-2 - Kubernetes:
-----------------
+2 - Git and Docker commands
+------------------------------------------------------------------------------------------------
+
+Detailed table hai jo Git aur Docker commands ko side-by-side dikhata hai GitHub aur DockerHub ke liye:
+
+| **Git Command (GitHub)**              | **Docker Command (DockerHub)**                       | **Description**                                             |
+|---------------------------------------|------------------------------------------------------|-------------------------------------------------------------|
+| `git init`                            | `docker init`                                        | Repository ya project initialize karna                      |
+| `git clone <repo-url>`                | `docker pull <image>`                                | Repository ya image ko local machine par clone/pull karna   |
+| `git status`                          | N/A                                                  | Repository ke current status ko check karna                 |
+| `git add <file>`                      | N/A                                                  | File ko staging area mein add karna                         |
+| `git commit -m "message"`             | `docker commit <container-id> <new-image-name>`       | Changes ko commit karna                                     |
+| `git push origin <branch>`            | `docker push <username>/<repository>:<tag>`           | Changes ko remote repository par push karna                 |
+| `git pull origin <branch>`            | `docker pull <username>/<repository>:<tag>`           | Changes ko remote repository se pull karna                  |
+| `git branch`                          | `docker images`                                      | Available branches ya images ko list karna                  |
+| `git checkout <branch>`               | `docker run <image>`                                 | Branch ya image ko switch/run karna                         |
+| `git merge <branch>`                  | N/A                                                  | Branches ko merge karna                                     |
+| `git log`                             | `docker history <image>`                             | Commit history ya image history ko dekhna                   |
+| `git remote add origin <repo-url>`    | `docker tag <image> <username>/<repository>:<tag>`   | Remote repository ya image ko link/tag karna                |
+| `git fetch`                           | `docker search <image>`                              | Remote repository se latest updates ko fetch karna          |
+| `git reset --hard <commit>`           | `docker rm <container-id>`                           | Changes ko reset karna ya container ko remove karna         |
+| `git rm <file>`                       | `docker rmi <image>`                                 | File ko remove karna ya image ko remove karna               |
+| `git show <commit>`                   | `docker inspect <container-id or image>`             | Show detailed information about a commit or container/image |
+| `git diff <file>`                     | N/A                                                  | Show differences between commits/files                     |
+| `git tag <tag-name>`                  | `docker tag <image> <new-tag>`                       | Tag a specific commit or image                              |
+| `git stash`                           | N/A                                                  | Temporarily stash changes                                   |
+| `git revert <commit>`                 | N/A                                                  | Reverse a commit                                            |
+| `git remote -v`                       | N/A                                                  | List configured remotes                                     |
+| `git config --global user.name "name"`| N/A                                                  | Set user name globally                                     |
+
+### Explanation
+- **Git Commands (GitHub)**: Git commands jaise `init`, `clone`, `add`, `commit`, `push`, `pull`, `branch`, `checkout`, `merge`, `log`, `remote`, `fetch`, `reset`, `rm`, `show`, `diff`, `tag`, `stash`, `revert`, `config` GitHub repositories ke liye useful hote hain.
+- **Docker Commands (DockerHub)**: Docker commands jaise `init`, `pull`, `commit`, `push`, `images`, `run`, `history`, `tag`, `search`, `rm`, `rmi`, `inspect` Docker images aur containers ke liye useful hote hain.
+
+Is table se aap dono technologies ke important commands ko compare karke samajh sakte hain aur apne workflow mein use kar sakte hain. Agar aur koi specific command ya concept ke baare mein jaankari chahiye ho, to mujhse pooch sakte hain!
+
+------------------------------------------------------------------------------------------------------------------------------
+
+Git commands aur Docker commands ko side-by-side dikhata hai jo aap GitHub aur DockerHub ke liye use kar sakte hain:
+
+| **Git Command (GitHub ke liye)**       | **Docker Command (DockerHub ke liye)**          | **Description**                                             |
+|----------------------------------------|-------------------------------------------------|-------------------------------------------------------------|
+| `git init`                             | `docker init`                                    | Repository ya project initialize karna                      |
+| `git clone <repo-url>`                 | `docker pull <image>`                            | Repository ya image ko local machine par clone/pull karna   |
+| `git status`                           | N/A                                             | Repository ke current status ko check karna                 |
+| `git add <file>`                       | N/A                                             | File ko staging area mein add karna                         |
+| `git commit -m "message"`              | `docker commit <container-id> <new-image-name>`  | Changes ko commit karna                                     |
+| `git push origin <branch>`             | `docker push <username>/<repository>:<tag>`      | Changes ko remote repository par push karna                 |
+| `git pull origin <branch>`             | `docker pull <username>/<repository>:<tag>`      | Changes ko remote repository se pull karna                  |
+| `git branch`                           | `docker images`                                  | Available branches ya images ko list karna                  |
+| `git checkout <branch>`                | `docker run <image>`                             | Branch ya image ko switch/run karna                         |
+| `git merge <branch>`                   | N/A                                             | Branches ko merge karna                                     |
+| `git log`                              | `docker history <image>`                         | Commit history ya image history ko dekhna                   |
+| `git remote add origin <repo-url>`     | `docker tag <image> <username>/<repository>:<tag>`| Remote repository ya image ko link/tag karna                |
+| `git fetch`                            | `docker search <image>`                          | Remote repository se latest updates ko fetch karna          |
+| `git reset --hard <commit>`            | `docker rm <container-id>`                       | Changes ko reset karna ya container ko remove karna         |
+| `git rm <file>`                        | `docker rmi <image>`                             | File ko remove karna ya image ko remove karna               |
+
+### Explanation
+
+#### Git Commands (GitHub ke liye)
+1. **`git init`**: Naya Git repository initialize karta hai.
+2. **`git clone <repo-url>`**: Existing Git repository ko clone karta hai.
+3. **`git status`**: Current repository ka status dikhata hai.
+4. **`git add <file>`**: File ko staging area mein add karta hai.
+5. **`git commit -m "message"`**: Changes ko commit karta hai with a message.
+6. **`git push origin <branch>`**: Local commits ko remote repository par push karta hai.
+7. **`git pull origin <branch>`**: Remote repository se latest changes ko pull karta hai.
+8. **`git branch`**: Available branches ko list karta hai.
+9. **`git checkout <branch>`**: Specified branch par switch karta hai.
+10. **`git merge <branch>`**: Do branches ko merge karta hai.
+11. **`git log`**: Commit history ko dikhata hai.
+12. **`git remote add origin <repo-url>`**: Remote repository ko link karta hai.
+13. **`git fetch`**: Remote repository se latest updates ko fetch karta hai.
+14. **`git reset --hard <commit>`**: Commit history ko reset karta hai.
+15. **`git rm <file>`**: File ko remove karta hai from repository.
+
+#### Docker Commands (DockerHub ke liye)
+1. **`docker init`**: Docker project initialize karta hai (usually not used in CLI, more conceptual).
+2. **`docker pull <image>`**: DockerHub se image ko pull karta hai.
+3. **`docker commit <container-id> <new-image-name>`**: Running container ko new image mein commit karta hai.
+4. **`docker push <username>/<repository>:<tag>`**: Image ko DockerHub par push karta hai.
+5. **`docker images`**: Local machine par available images ko list karta hai.
+6. **`docker run <image>`**: Specified image ko run karta hai.
+7. **`docker history <image>`**: Image ka history dikhata hai.
+8. **`docker tag <image> <username>/<repository>:<tag>`**: Image ko tag karta hai for DockerHub.
+9. **`docker search <image>`**: DockerHub par image ko search karta hai.
+10. **`docker rm <container-id>`**: Specified container ko remove karta hai.
+11. **`docker rmi <image>`**: Specified image ko remove karta hai.
+
+### Comparison Summary
+- **Repository/Image Management**: Git mein `clone` aur `push/pull` commands ko Docker mein `pull` aur `push` ke saath compare kiya jata hai.
+- **Version Control**: Git mein `commit` aur `branch` management, Docker mein `commit` aur `tag` management.
+- **History/Status**: Git mein `log` aur `status`, Docker mein `history`.
+
+Is table ko use karke aap easily Git aur Docker commands ko samajh sakte hain aur apne DevOps workflow mein use kar sakte hain. Agar aapko kisi specific command ya concept ke baare mein aur details chahiye ho, to aap mujhe bata sakte hain!
+
+
+3 - Devops workflow and creation infrastructure and invironment roadmap
+------------------------------------------------------------------------------------------------
+
+DevOps environment setup karna bahut exciting aur informative process hai. Yaha par ek step-by-step guide hai jo aapko help karegi ek DevOps practice environment setup karne mein. Hum basic tools aur platforms ko cover karenge jo commonly use hote hain DevOps practices mein.
+
+### Step-by-Step Guide to Set Up DevOps Environment
+
+#### Step 1: Install Version Control System (Git)
+1. **Download Git:**
+   - [Git Download](https://git-scm.com/downloads)
+2. **Install Git:**
+   - Downloaded installer ko run karke installation process follow karein.
+
+3. **Configure Git:**
+   ```sh
+   git config --global user.name "Your Name"
+   git config --global user.email "your.email@example.com"
+   ```
+
+#### Step 2: Set Up GitHub Account
+1. **Create GitHub Account:**
+   - [GitHub Sign Up](https://github.com/join)
+2. **Create a Repository:**
+   - GitHub par sign in karke new repository create karein.
+
+#### Step 3: Install Docker
+1. **Download Docker:**
+   - [Docker Desktop](https://www.docker.com/products/docker-desktop)
+2. **Install Docker:**
+   - Downloaded installer ko run karke installation process follow karein.
+3. **Verify Docker Installation:**
+   ```sh
+   docker --version
+   ```
+
+#### Step 4: Install Kubernetes
+1. **Download kubectl:**
+   - [kubectl Install Instructions](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+2. **Install minikube (Local Kubernetes Cluster):**
+   - [Minikube Installation](https://minikube.sigs.k8s.io/docs/start/)
+3. **Start Minikube:**
+   ```sh
+   minikube start
+   ```
+4. **Verify Minikube Installation:**
+   ```sh
+   kubectl get nodes
+   ```
+
+#### Step 5: Install Jenkins
+1. **Download Jenkins:**
+   - [Jenkins Download](https://www.jenkins.io/download/)
+2. **Install Jenkins:**
+   - Downloaded installer ko run karke installation process follow karein.
+3. **Start Jenkins:**
+   - Follow setup instructions on [Jenkins Setup](https://www.jenkins.io/doc/book/installing/)
+
+#### Step 6: Install Ansible
+1. **Install Ansible:**
+   ```sh
+   # For Ubuntu/Debian
+   sudo apt update
+   sudo apt install ansible
+
+   # For macOS
+   brew install ansible
+   ```
+2. **Verify Ansible Installation:**
+   ```sh
+   ansible --version
+   ```
+
+#### Step 7: Install Terraform
+1. **Download Terraform:**
+   - [Terraform Download](https://www.terraform.io/downloads.html)
+2. **Install Terraform:**
+   - Downloaded binary ko extract karke PATH mein add karein.
+3. **Verify Terraform Installation:**
+   ```sh
+   terraform --version
+   ```
+
+#### Step 8: Install Monitoring Tools (Prometheus & Grafana)
+1. **Prometheus Installation:**
+   - [Prometheus Download](https://prometheus.io/download/)
+2. **Grafana Installation:**
+   - [Grafana Download](https://grafana.com/grafana/download)
+
+#### Step 9: Set Up CI/CD with Jenkins
+1. **Create a New Job in Jenkins:**
+   - Jenkins UI par navigate karke new job create karein.
+2. **Configure Job for Git Repository:**
+   - Source Code Management mein Git select karke repository URL add karein.
+3. **Set Up Build Triggers:**
+   - Poll SCM ya webhook configure karein for continuous integration.
+4. **Add Build Steps:**
+   - Build steps add karke apni application ko build aur test karein.
+
+#### Step 10: Practice and Experiment
+1. **Create Sample Projects:**
+   - GitHub par sample repositories create karke different DevOps practices try karein.
+2. **Deploy Applications:**
+   - Docker aur Kubernetes use karke applications ko deploy karein.
+3. **Automate Workflows:**
+   - Ansible aur Terraform use karke infrastructure aur configuration ko automate karein.
+
+### Additional Tips
+- **Learn DevOps Concepts:**
+  - Online courses, tutorials, aur documentation par study karein.
+- **Join Communities:**
+  - DevOps communities aur forums join karke apne knowledge share aur expand karein.
+- **Experiment and Iterate:**
+  - Naye tools aur practices ko experiment karke best practices identify karein.
+
+Is guide ko follow karke aap apna DevOps environment setup kar sakte hain aur different DevOps practices ko practice kar sakte hain. Agar aapko kisi bhi step mein help chahiye ho, to aap mujhe bata sakte hain!
+
+4 - DevOps primary tools and use 
+----------------------------------------------------------------------------------------------------
+
+DevOps tools ka primary purpose hai software development aur IT operations ko streamline karna, automation, monitoring, aur collaboration ko improve karna. Yaha par ek list hai kuch popular DevOps tools ke categories ke saath:
+
+### Version Control Systems (VCS)
+1. **Git**
+2. **Subversion (SVN)**
+3. **Mercurial**
+
+### Continuous Integration/Continuous Deployment (CI/CD)
+1. **Jenkins**
+2. **Travis CI**
+3. **CircleCI**
+4. **GitLab CI/CD**
+5. **Bamboo**
+6. **TeamCity**
+
+### Configuration Management
+1. **Ansible**
+2. **Chef**
+3. **Puppet**
+4. **SaltStack**
+
+### Infrastructure as Code (IaC)
+1. **Terraform**
+2. **AWS CloudFormation**
+3. **Azure Resource Manager (ARM) Templates**
+4. **Google Cloud Deployment Manager**
+
+### Containerization
+1. **Docker**
+2. **Podman**
+
+### Container Orchestration
+1. **Kubernetes**
+2. **Docker Swarm**
+3. **Apache Mesos**
+4. **OpenShift**
+
+### Monitoring and Logging
+1. **Prometheus**
+2. **Grafana**
+3. **Nagios**
+4. **Elasticsearch, Logstash, and Kibana (ELK Stack)**
+5. **Splunk**
+6. **Datadog**
+7. **New Relic**
+
+### Collaboration and Communication
+1. **Slack**
+2. **Microsoft Teams**
+3. **Trello**
+4. **Jira**
+5. **Confluence**
+
+### Testing
+1. **Selenium**
+2. **JUnit**
+3. **TestNG**
+4. **Jest**
+5. **Mocha**
+
+### Artifact Repositories
+1. **Nexus Repository**
+2. **JFrog Artifactory**
+3. **AWS CodeArtifact**
+
+### Build Tools
+1. **Maven**
+2. **Gradle**
+3. **Ant**
+
+### Security and Compliance
+1. **Aqua Security**
+2. **Twistlock (now part of Palo Alto Networks Prisma Cloud)**
+3. **Snyk**
+4. **HashiCorp Vault**
+
+### Source Code Management (SCM) Hosting Services
+1. **GitHub**
+2. **GitLab**
+3. **Bitbucket**
+
+### Cloud Platforms
+1. **Amazon Web Services (AWS)**
+2. **Microsoft Azure**
+3. **Google Cloud Platform (GCP)**
+4. **IBM Cloud**
+
+### Container Registries
+1. **Docker Hub**
+2. **Google Container Registry (GCR)**
+3. **Amazon Elastic Container Registry (ECR)**
+4. **Azure Container Registry (ACR)**
+
+### Serverless Computing
+1. **AWS Lambda**
+2. **Google Cloud Functions**
+3. **Azure Functions**
+
+### Automation Tools
+1. **HashiCorp Packer**
+2. **HashiCorp Consul**
+3. **Kustomize**
+
+### Code Review Tools
+1. **Review Board**
+2. **Crucible**
+
+### Secret Management
+1. **HashiCorp Vault**
+2. **AWS Secrets Manager**
+3. **Azure Key Vault**
+
+### Database Management
+1. **Flyway**
+2. **Liquibase**
+
+Ye tools DevOps lifecycle ke different stages ko cover karte hain, aur inka use karne se software development aur deployment processes more efficient aur reliable bante hain.
+
+5 - Kubernetes documentation:
+------------------------------------------------------------------------------------------------
 
 Chaliye, main aapko DevOps tools jaise Git, GitHub, Docker, kubectl, Minikube, Jenkins, Terraform, Prometheus, aur Grafana ka istemal kyun hota hai, usko real-life company examples ke through samjhata hoon:
 
