@@ -525,7 +525,6 @@ Yeh examples dikhate hain ki DevOps tools ka istemal kaise companies apne develo
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
 <h2> 6 - Docker and Kubernetes withoud containerization tool Kubernetes useless </h2>
-------------------------------------------------------------------------------------------------------------------------------------------------
 
 Haan, kuch had tak aap sahi hain. Kubernetes primarily ek container orchestration tool hai, aur agar containerization tool (jaise Docker, containerd, ya CRI-O) na ho, to Kubernetes apne aap mein kisi kaam ka nahi hota. Let's understand this in detail:
 
