@@ -523,7 +523,7 @@ Chaliye, main aapko DevOps tools jaise Git, GitHub, Docker, kubectl, Minikube, J
 Yeh examples dikhate hain ki DevOps tools ka istemal kaise companies apne development, deployment, aur infrastructure management processes ko automate aur streamline karne ke liye karte hain. In tools ki madad se teams efficient collaboration, reliable deployments, aur scalable infrastructure achieve karte hain. Agar aapko aur koi specific tool ya example ke baare mein jaanna hai, toh bataiye!
 
 ------------------------------------------------------------------------------------------------------------------------------------------
-<h1> 6 - Docker and Kubernetes withoud containerization tool Kubernetes useless </h1>
+<h3> 6 - Docker and Kubernetes withoud containerization tool Kubernetes useless </h3>
 -------------------------------------------------------------------------------------------------------------------------------------------
 Haan, kuch had tak aap sahi hain. Kubernetes primarily ek container orchestration tool hai, aur agar containerization tool (jaise Docker, containerd, ya CRI-O) na ho, to Kubernetes apne aap mein kisi kaam ka nahi hota. Let's understand this in detail:
 
