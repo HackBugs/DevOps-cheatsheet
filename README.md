@@ -8,6 +8,7 @@ Documentation : All About docker installation And setup and how to configure
 1 - Devops:
 -------------
 
+https://github.com/LondheShubham153/kubestarter
 https://app.eraser.io/workspace/5bTzpbKkfb3PdcgYZ4Je
 
 - In devops same like a datagard mean we make replica and duplicate of production database
