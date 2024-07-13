@@ -5,7 +5,7 @@ Author : HackBugs
 
 Documentation : All About docker installation And setup and how to configure
 ----------------------------------------------------------------------------------
- <h2 style="color: red;"> 1 - Devops: </h2>
+ ## 🚀 1 - Devops:
 
 https://github.com/LondheShubham153/kubestarter
 https://app.eraser.io/workspace/5bTzpbKkfb3PdcgYZ4Je
