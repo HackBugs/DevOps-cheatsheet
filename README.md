@@ -149,6 +149,65 @@ Git commands aur Docker commands ko side-by-side dikhata hai jo aap GitHub aur D
 
 Is table ko use karke aap easily Git aur Docker commands ko samajh sakte hain aur apne DevOps workflow mein use kar sakte hain. Agar aapko kisi specific command ya concept ke baare mein aur details chahiye ho, to aap mujhe bata sakte hain!
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Yeh raha ek detailed table jo Git, Docker, kubeadm, aur kubectl commands ko side-by-side dikhata hai. Isme jitne possible commands hain, unhe include kiya gaya hai:
+
+### Git, Docker, kubeadm, aur kubectl Commands
+
+| **Task**                          | **Git Commands**                         | **Docker Commands**                           | **kubeadm Commands**                         | **kubectl Commands**                       |
+|-----------------------------------|------------------------------------------|-----------------------------------------------|----------------------------------------------|---------------------------|
+| Initialize a repository           | `git init`                               |                                               | `kubeadm init`                               |                                            |
+| Clone a repository                | `git clone <repo_url>`                   |                                               |                                              |                                            |
+| Add files to staging              | `git add <file>`                         |                                               |                                              |                                            |
+| Commit changes                    | `git commit -m "message"`                |                                               |                                              |                                            |
+| Push changes                      | `git push <remote> <branch>`             |                                               |                                              |                                            |
+| Pull changes                      | `git pull <remote> <branch>`             |                                               |                                              |                                            |
+| Check status                      | `git status`                             |                                               |                                              |                                            |
+| List branches                     | `git branch`                             |                                               |                                              |                                            |
+| Create new branch                 | `git branch <branch_name>`               |                                               |                                              |                                            |
+| Switch branches                   | `git checkout <branch_name>`             |                                               |                                              |                                            |
+| Merge branches                    | `git merge <branch_name>`                |                                               |                                              |                                            |
+| Revert commit                     | `git revert <commit_id>`                 |                                               |                                              |                                            |
+| Show commit history               | `git log`                                |                                               |                                              |                                            |
+| Create Docker container           |                                          | `docker run <image>`                          |                                              |                                            |
+| List running containers           |                                          | `docker ps`                                   |                                              |                                            |
+| Stop a container                  |                                          | `docker stop <container_id>`                  |                                              |                                            |
+| Remove a container                |                                          | `docker rm <container_id>`                    |                                              |                                            |
+| Build an image                    |                                          | `docker build -t <image_name> .`              |                                              |                                            |
+| List images                       |                                          | `docker images`                               |                                              |                                            |
+| Pull an image                     |                                          | `docker pull <image>`                         |                                              |                                            |
+| Push an image                     |                                          | `docker push <image>`                         |                                              |                                            |
+| Tag an image                      |                                          | `docker tag <image> <new_tag>`                |                                              |                                            |
+| Initialize Kubernetes cluster     |                                          |                                               | `kubeadm init`                               |                                            |
+| Join a Kubernetes cluster         |                                          |                                               | `kubeadm join <master_ip>:<port> --token <token> --discovery-token-ca-cert-hash sha256:<hash>` |            |
+| Upgrade Kubernetes cluster        |                                          |                                               | `kubeadm upgrade apply <version>`            |                                            |
+| Reset Kubernetes cluster          |                                          |                                               | `kubeadm reset`                              |                                            |
+| Get cluster information           |                                          |                                               |                                              | `kubectl cluster-info`                     |
+| Apply configuration               |                                          |                                               |                                              | `kubectl apply -f <file>`                  |
+| Get pods                          |                                          |                                               |                                              | `kubectl get pods`                         |
+| Describe pod                      |                                          |                                               |                                              | `kubectl describe pod <pod_name>`          |
+| Delete pod                        |                                          |                                               |                                              | `kubectl delete pod <pod_name>`            |
+| Get services                      |                                          |                                               |                                              | `kubectl get svc`                          |
+| Describe service                  |                                          |                                               |                                              | `kubectl describe svc <svc_name>`          |
+| Delete service                    |                                          |                                               |                                              | `kubectl delete svc <svc_name>`            |
+| Get deployments                   |                                          |                                               |                                              | `kubectl get deployments`                  |
+| Describe deployment               |                                          |                                               |                                              | `kubectl describe deployment <deployment_name>` |
+| Delete deployment                 |                                          |                                               |                                              | `kubectl delete deployment <deployment_name>` |
+| Get nodes                         |                                          |                                               |                                              | `kubectl get nodes`                        |
+| Describe node                     |                                          |                                               |                                              | `kubectl describe node <node_name>`        |
+| Drain node                        |                                          |                                               |                                              | `kubectl drain <node_name>`                |
+| Cordon node                       |                                          |                                               |                                              | `kubectl cordon <node_name>`               |
+| Uncordon node                     |                                          |                                               |                                              | `kubectl uncordon <node_name>`             |
+| Get namespaces                    |                                          |                                               |                                              | `kubectl get namespaces`                   |
+| Create namespace                  |                                          |                                               |                                              | `kubectl create namespace <namespace>`     |
+| Delete namespace                  |                                          |                                               |                                              | `kubectl delete namespace <namespace>`     |
+| Get events                        |                                          |                                               |                                              | `kubectl get events`                       |
+| Get logs                          |                                          |                                               |                                              | `kubectl logs <pod_name>`                  |
+| Execute command in pod            |                                          |                                               |                                              | `kubectl exec -it <pod_name> -- <command>` |
+
+Yeh table aapko ek comprehensive comparison provide karta hai, jo Git, Docker, kubeadm, aur kubectl commands ko dikhata hai. Agar aur detail ya specific commands ki zaroorat ho, toh bataiye!
+
 
 3 - Devops workflow and creation infrastructure and invironment roadmap
 ------------------------------------------------------------------------------------------------
