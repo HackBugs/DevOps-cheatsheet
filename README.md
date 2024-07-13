@@ -3,9 +3,16 @@
 This documentation about docker
 Author : HackBugs
 
+## 🚀 1 - Devops:
+## 🛠️ 2 - Git and Docker commands:
+## 📈 3 - Devops workflow and creation infrastructure and environment roadmap:
+## 🔧 4 - DevOps primary tools and use:
+## 📚 5 - Kubernetes documentation:
+## 🚢 6 - Docker and Kubernetes without containerization tool Kubernetes useless:
+
 Documentation : All About docker installation And setup and how to configure
 ----------------------------------------------------------------------------------
-<h2 style="color: red;"> 1 - Devops: </h2>
+
 
 https://github.com/LondheShubham153/kubestarter
 https://app.eraser.io/workspace/5bTzpbKkfb3PdcgYZ4Je
@@ -52,7 +59,7 @@ Container or virtual machine manager, such as:
 Docker, QEMU, Hyperkit, Hyper-V, KVM, Parallels, Podman, VirtualBox, or VMware Fusion/Workstation
 ------------------------------------------------------------------------------------------------
 
-<h2> 2 - Git and Docker commands: </h2>
+## 🛠️ 2 - Git and Docker commands:
 
 Detailed table hai jo Git aur Docker commands ko side-by-side dikhata hai GitHub aur DockerHub ke liye:
 
@@ -250,7 +257,7 @@ Yeh table aapko ek comprehensive comparison provide karta hai, jo Git, Docker, k
 - **Kubeadm**: Mainly cluster setup aur management ke liye use hota hai.
 - **kubectl**: Cluster aur resources ko operate aur manage karne ke liye use hota hai.
 
-<h2> 3 - Devops workflow and creation infrastructure and invironment roadmap </h2>
+## 📈 3 - Devops workflow and creation infrastructure and environment roadmap:
 
 DevOps environment setup karna bahut exciting aur informative process hai. Yaha par ek step-by-step guide hai jo aapko help karegi ek DevOps practice environment setup karne mein. Hum basic tools aur platforms ko cover karenge jo commonly use hote hain DevOps practices mein.
 
@@ -365,7 +372,7 @@ DevOps environment setup karna bahut exciting aur informative process hai. Yaha 
 
 Is guide ko follow karke aap apna DevOps environment setup kar sakte hain aur different DevOps practices ko practice kar sakte hain. Agar aapko kisi bhi step mein help chahiye ho, to aap mujhe bata sakte hain!
 
-<h2> 4 - DevOps primary tools and use </h2>
+## 🔧 4 - DevOps primary tools and use:
 
 DevOps tools ka primary purpose hai software development aur IT operations ko streamline karna, automation, monitoring, aur collaboration ko improve karna. Yaha par ek list hai kuch popular DevOps tools ke categories ke saath:
 
@@ -485,7 +492,7 @@ DevOps tools ka primary purpose hai software development aur IT operations ko st
 
 Ye tools DevOps lifecycle ke different stages ko cover karte hain, aur inka use karne se software development aur deployment processes more efficient aur reliable bante hain.
 
-<h2> 5 - Kubernetes documentation: </h2>
+## 📚 5 - Kubernetes documentation:
 
 Chaliye, main aapko DevOps tools jaise Git, GitHub, Docker, kubectl, Minikube, Jenkins, Terraform, Prometheus, aur Grafana ka istemal kyun hota hai, usko real-life company examples ke through samjhata hoon:
 
@@ -519,7 +526,7 @@ Yeh examples dikhate hain ki DevOps tools ka istemal kaise companies apne develo
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
-<h2> 6 - Docker and Kubernetes withoud containerization tool Kubernetes useless </h2>
+## 🚢 6 - Docker and Kubernetes without containerization tool Kubernetes useless:
 
 Haan, kuch had tak aap sahi hain. Kubernetes primarily ek container orchestration tool hai, aur agar containerization tool (jaise Docker, containerd, ya CRI-O) na ho, to Kubernetes apne aap mein kisi kaam ka nahi hota. Let's understand this in detail:
 
