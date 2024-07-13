@@ -6,6 +6,7 @@ Author : HackBugs
 Documentation : All About docker installation And setup and how to configure
 ----------------------------------------------------------------------------------
 1 - Devops:
+-------------
 
 https://app.eraser.io/workspace/5bTzpbKkfb3PdcgYZ4Je
 
@@ -50,5 +51,5 @@ Container or virtual machine manager, such as:
 Docker, QEMU, Hyperkit, Hyper-V, KVM, Parallels, Podman, VirtualBox, or VMware Fusion/Workstation
 ------------------------------------------------------------------------------------------------
 
-2 - Kubernetes -
+2 - Kubernetes:
 ----------------
