@@ -70,9 +70,9 @@ Detailed table hai jo Git aur Docker commands ko side-by-side dikhata hai GitHub
 | `git clone <repo-url>`                | `docker pull <image>`                                | Repository ya image ko local machine par clone/pull karna   |
 | `git status`                          | N/A                                                  | Repository ke current status ko check karna                 |
 | `git add <file>`                      | N/A                                                  | File ko staging area mein add karna                         |
-| `git commit -m "message"`             | `docker commit <container-id> <new-image-name>`       | Changes ko commit karna                                     |
-| `git push origin <branch>`            | `docker push <username>/<repository>:<tag>`           | Changes ko remote repository par push karna                 |
-| `git pull origin <branch>`            | `docker pull <username>/<repository>:<tag>`           | Changes ko remote repository se pull karna                  |
+| `git commit -m "message"`             | `docker commit <container-id> <new-image-name>`      | Changes ko commit karna                                     |
+| `git push origin <branch>`            | `docker push <username>/<repository>:<tag>`          | Changes ko remote repository par push karna                 |
+| `git pull origin <branch>`            | `docker pull <username>/<repository>:<tag>`          | Changes ko remote repository se pull karna                  |
 | `git branch`                          | `docker images`                                      | Available branches ya images ko list karna                  |
 | `git checkout <branch>`               | `docker run <image>`                                 | Branch ya image ko switch/run karna                         |
 | `git merge <branch>`                  | N/A                                                  | Branches ko merge karna                                     |
